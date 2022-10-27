@@ -177,11 +177,30 @@
             font-size: 12px;
         }
     </style>
+    <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
 </head>
 
 <body>
+<div id="vdh" class="vodohod-search-widget-container" style="height: 100%; width: 80%; margin: 0 auto;">
+            <!-- Инициализация виджета -->
+            <div id="vodohod-search-widget"
+            test-site-url="www.cruise-russia.ru"
+            accent-bg-color-1="#0173A7"
+            accent-bg-color-2="#1083c8"
+            accent-text-color-1="#fff"
+            accent-text-color-2="#0c2241"
+            border-color-1="rgba(0, 0, 0, 0.1)"
+            search-page-padding="24px 24px"
+            font-1="Roboto"
+            mini-layout="true"
+            search-page-url="search.html"
+            set-url-params="false"
+            is-single-page-app="false">
+            </div>
+            </div>
 
-<section>
+<!--<section>
     <h1 id="greeting"></h1>
 
     <div id="buttons">
@@ -223,7 +242,7 @@
     <pre id="initData"></pre>
     <h3>Init Data (unsafe): </h3>
     <pre id="initDataUnsafe"></pre>
-</section>
+</section>-->
 
 <script type="application/javascript">
     Telegram.WebApp.ready();
@@ -231,10 +250,10 @@
     const initData = Telegram.WebApp.initData || '';
     const initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
 
-    document.querySelector('#greeting').innerHTML = `Hi, ${initDataUnsafe.user.first_name}!`;
-    document.querySelector('#initData').innerHTML = JSON.stringify(initData, null, 2);
-    document.querySelector('#initDataUnsafe').innerHTML = JSON.stringify(initDataUnsafe, null, 2);
-    document.querySelector('#themeData').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
+    //document.querySelector('#greeting').innerHTML = `Hi, ${initDataUnsafe.user.first_name}!`;
+    //document.querySelector('#initData').innerHTML = JSON.stringify(initData, null, 2);
+    //document.querySelector('#initDataUnsafe').innerHTML = JSON.stringify(initDataUnsafe, null, 2);
+    //document.querySelector('#themeData').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
 
     Telegram.WebApp.MainButton
         .setText('CLOSE WEBVIEW')
@@ -305,5 +324,6 @@
         return false;
     }
 </script>
+<script src="https://vodohod.com/local/client/widget/dist/vodohod-search-widget.js"></script>
 </body>
 </html>
